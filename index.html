@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <title>La Fourchette</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa fa-cutlery me-2" aria-hidden="true"></i>
+                        La Fourchette
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item me-4">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item me-4">
+                                <a class="nav-link" href="#">Menu</a>
+                            </li>
+                            <li class="nav-item me-4">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <button class="btn btn-outline-secondary">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span id="quantityDisplay">0</span>
+                            </button>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- MENU -->
+
+        <div class="container mt-5 text-center">
+            <div class="row">
+                <h1 class="text-center">Menu</h1>
+                <div class="col-12 col-md-3 mt-3">
+                    <div class="card" style="width: 19rem;">
+                        <img
+                            src="images/Caprese-Salad-6.jpg"
+                            height="350px"
+                            class="card-img-top"
+                            alt="..."
+                        >
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Caprese Salad</h5>
+                                <button id="heartBtn-1" class="btn btn-success"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                            </div>
+                            <p class="card-text">Fresh tomatoes, mozzarella, and basil drizzled with balsamic glaze.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">2500 F.CFA</span>
+                                <button  id="incrementBtn-1" data='{"price": 2500, "name": "Caprese Salad"}' class="btn btn-outline-primary"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button id="decrementBtn-1" data='{"price": 2500, "name": "Caprese Salad"}' class="btn btn-outline-danger"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mt-3">
+                    <div class="card" style="width: 19rem;">
+                        <img
+                            src="images/Grilled-salmon.jpg"
+                            height="350px"
+                            class="card-img-top"
+                            alt="..."
+                        >
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Grilled Salmon</h5>
+                                <button id="heartBtn-2" class="btn btn-success"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                            </div>
+                            <p class="card-text">Salmon fillet seasoned and grilled to perfection, served with butter sauce.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">5.000 F.CFA</span>
+                                <button  id="incrementBtn-2" data='{"price": 5000, "name": "Grilled Salmon"}' class="btn btn-outline-primary"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button id="decrementBtn-2" data='{"price": 5000, "name": "Grilled Salmon"}' class="btn btn-outline-danger"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mt-3">
+                    <div class="card" style="width: 19rem;">
+                        <img
+                            src="images/Chocolate-Fondue.jpg"
+                            height="350px"
+                            class="card-img-top"
+                            alt="..."
+                        >
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Chocolate Fondue</h5>
+                                <button id="heartBtn-3" class="btn btn-success"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                            </div>
+                            <p class="card-text">Assorted fruits and marshmallows served with rich chocolate fondue.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">2.500 F.CFA</span>
+                                <button  id="incrementBtn-3" data='{"price": 2500, "name": "Chocolate Fondue"}' class="btn btn-outline-primary"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button id="decrementBtn-3" data='{"price": 2500, "name": "Chocolate Fondue"}' class="btn btn-outline-danger"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mt-3">
+                    <div class="card" style="width: 19rem;">
+                        <img
+                            src="images/homemade-ice-cream-recipe.jpg"
+                            height="350px"
+                            class="card-img-top"
+                            alt="..."
+                        >
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Homenade Ice Cream</h5>
+                                <button id="heartBtn-2" class="btn btn-success"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                            </div>
+                            <p class="card-text">Assorted fruits and marshmallows served with rich chocolate fondue.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">2.500 F.CFA</span>
+                                <button  id="incrementBtn-4" data='{"price": 2500, "name": "Chocolate Fondue"}' class="btn btn-outline-primary"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button id="decrementBtn-4" data='{"price": 2500, "name": "Chocolate Fondue"}' class="btn btn-outline-danger"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            
+            
+        </div>
+        <div id="cart-pop">
+            <ul id="cart-elements" class="px-5">
+      
+            </ul>
+            <div id="total"></div>
+            
+            </div>
+        </div>
+        
+
+        <script src="script.js"></script>
+    </body>
+</html>
